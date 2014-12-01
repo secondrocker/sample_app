@@ -28,6 +28,7 @@ describe "Static pages" do
     let(:page_title){"About Us"}
     before{visit about_path}
     it_should_behave_like "All static page"
+
   end
 
   describe "Contact Us" do

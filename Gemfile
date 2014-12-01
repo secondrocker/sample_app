@@ -38,6 +38,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'spring',        group: :development
 
+gem 'bcrypt-ruby'
 
 group :production do
   gem 'pg', '0.15.1'
