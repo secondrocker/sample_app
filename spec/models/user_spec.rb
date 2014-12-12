@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe User do
-  before { @user = User.new(name: "王栋", email: "secondrocker@gmail.com") }
+  before { @user = User.new(name: "王栋", email: "secondrocker@gmail.com",password: "wa123456") }
   subject{@user}
   it{should respond_to :name}
   it{should respond_to :email}
