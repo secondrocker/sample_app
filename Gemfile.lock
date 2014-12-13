@@ -55,6 +55,11 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.2.2)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
+      railties (>= 3.0.0)
     ffi (1.9.6)
     formatador (0.2.5)
     guard (2.9.0)
@@ -99,6 +104,8 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-nav (0.2.4)
+      pry (>= 0.9.10, < 0.11.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -199,11 +206,14 @@ DEPENDENCIES
   capybara
   childprocess
   coffee-rails (~> 4.0.0)
+  factory_girl_rails
   guard-rspec
   guard-spork
   jbuilder (~> 2.0)
   jquery-rails
   pg (= 0.15.1)
+  pry
+  pry-nav
   rails (= 4.1.7)
   rspec-rails
   sass-rails (~> 4.0.3)
