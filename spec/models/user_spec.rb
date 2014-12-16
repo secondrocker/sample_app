@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe User do
+describe "User" do
   before { @user = User.new(name: "王栋", email: "secondrocker@gmail.com",password: "wa123456") }
   subject{@user}
   it{should respond_to :name}
@@ -9,6 +9,7 @@ describe User do
   it{should respond_to :id}
   it{should respond_to :password_digest}
   it{should respond_to :password_confirmation}
+  it{should respond_to :remember_token}
   describe "when name is not present" do
     before{@user.name = ''}
     it{should_not be_valid}
@@ -51,4 +52,8 @@ describe User do
     it{should_not be_valid}
   end
 
+  describe "user's token should not be blank" do
+    before{@user.save}
+    it{ expect(@user.remember_token).not_to be_blank }
+  end
 end
